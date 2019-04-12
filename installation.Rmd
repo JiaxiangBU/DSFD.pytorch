@@ -11,3 +11,35 @@ HTTP errors are often intermittent, and a simple retry will get you on your way.
 
 试试 pip
 
+```
+pip3 install https://download.pytorch.org/whl/cpu/torch-1.0.1-cp35-cp35m-win_amd64.whl
+pip3 install torchvision
+```
+
+```
+pip install easydict
+```
+
+```
+(face_recognization) D:\work\DSFD.pytorch>python demo.py
+D:\work\DSFD.pytorch\layers\modules\l2norm.py:26: UserWarning: nn.init.constant
+is now deprecated in favor of nn.init.constant_.
+  init.constant(self.weight,self.gamma)
+Traceback (most recent call last):
+  File "demo.py", line 107, in <module>
+    net.load_state_dict(torch.load(args.model))
+  File "D:\software\anaconda\envs\face_recognization\lib\site-packages\torch\ser
+ialization.py", line 366, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'weights/dsfd_face.pth'
+```
+
+
+```{r}
+suppressMessages(source(here::here("R/load.R")))
+```
+
+```{r}
+dir_info(recursive = T, regexp = "dsfd_face.pth")
+```
+
